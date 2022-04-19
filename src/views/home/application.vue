@@ -1,10 +1,11 @@
 <template>
     <div class="main_form">
-        <el-form ref="ruleFormRef" :model="formData" :rules="rules" label-width="140px" size="large" class="form" :inline="true">
+        <el-form ref="ruleFormRef" :model="formData" :rules="rules" label-width="140px" size="large" class="form"
+            :inline="true">
             <el-form-item label="性别" prop="gender">
                 <el-radio-group v-model="formData.gender">
-                    <el-radio label="男性" value=1 />
-                    <el-radio label="女性" value=2 />
+                    <el-radio label="1"> 男</el-radio>
+                    <el-radio label="0"> 女</el-radio>
                 </el-radio-group>
             </el-form-item>
             <div></div>
@@ -18,18 +19,18 @@
                 <el-switch v-model="formData.ownWorkPhone" />
             </el-form-item>
             <div></div>
-             <el-form-item label="总年收入(元)" prop="annualIncome">
+            <el-form-item label="总年收入(元)" prop="annualIncome">
                 <el-input v-model.number="formData.annualIncome" />
             </el-form-item>
             <div></div>
-             <el-form-item label="年龄" prop="age">
+            <el-form-item label="年龄" prop="age">
                 <el-input v-model.number="formData.age" />
             </el-form-item>
-             <el-form-item label="工龄(年)" prop="worksYears">
+            <el-form-item label="工龄(年)" prop="worksYears">
                 <el-input v-model.number="formData.worksYears" />
             </el-form-item>
             <div></div>
-             <el-form-item label="家中孩子的数量" prop="childNum">
+            <el-form-item label="家中孩子的数量" prop="childNum">
                 <el-input v-model.number="formData.childNum" />
             </el-form-item>
             <el-form-item label="家庭成员数量" prop="familySize">
@@ -37,59 +38,59 @@
             </el-form-item>
             <div></div>
             <el-form-item label="职业" prop="occupationType">
-            <el-select v-model="formData.occupationType" placeholder="请选择职业">
-                <el-option label="清洁/环卫" value="Cleaning staff" />
-                <el-option label="食品/厨师" value="Cooking staff" />
-                <el-option label="工人" value="Laborers" />
-                <el-option label="安保" value="Security staff" />
-                <el-option label="服务人员" value="Waiters/barmen staff" />
-                <el-option label="技工" value="Low-skill Laborers" />
+                <el-select v-model="formData.occupationType" placeholder="请选择职业">
+                    <el-option label="清洁/环卫" value="Cleaning staff" />
+                    <el-option label="食品/厨师" value="Cooking staff" />
+                    <el-option label="工人" value="Laborers" />
+                    <el-option label="安保" value="Security staff" />
+                    <el-option label="服务人员" value="Waiters/barmen staff" />
+                    <el-option label="技工" value="Low-skill Laborers" />
 
-                <el-option label="财务人员" value="Accountants" />
-                <el-option label="企业员工" value="Core staff" />
-                <el-option label="人力资源" value="HR staff" />
-                <el-option label="医药员工" value="Medicine staff" />
-                <el-option label="私人企业" value="Private service staff" />
-                <el-option label="房产员工" value="Realty agents" />
-                <el-option label="销售人员" value="Sales staff" />
-                <el-option label="秘书/助理" value="Secretaries" />
-                <el-option label="管理/经理" value="Managers" />
-                <el-option label="信息/科技员工" value="IT staff" />
-                <el-option label="高技术人员/研究员/高校" value="High skill tech staff" />
+                    <el-option label="财务人员" value="Accountants" />
+                    <el-option label="企业员工" value="Core staff" />
+                    <el-option label="人力资源" value="HR staff" />
+                    <el-option label="医药员工" value="Medicine staff" />
+                    <el-option label="私人企业" value="Private service staff" />
+                    <el-option label="房产员工" value="Realty agents" />
+                    <el-option label="销售人员" value="Sales staff" />
+                    <el-option label="秘书/助理" value="Secretaries" />
+                    <el-option label="管理/经理" value="Managers" />
+                    <el-option label="信息/科技员工" value="IT staff" />
+                    <el-option label="高技术人员/研究员/高校" value="High skill tech staff" />
 
-                <el-option label="其他" value="other" />
-            </el-select>
+                    <el-option label="其他" value="other" />
+                </el-select>
             </el-form-item>
 
-             <el-form-item label="居住情况 " prop="houseType">
-            <el-select v-model="formData.houseType" placeholder="请选择居住情况">
-                
-                <el-option label="与父母住" value="Parents" />
-                <el-option label="政府住房" value="Municipal" />
-                <el-option label="企业住房" value="Co-op" />
-                <el-option label="员工宿舍" value="Office" />
-                <el-option label="租住/合租" value="Rented" />
-                <el-option label="自住房" value="Owned" />
-                <el-option label="其他" value="other" />
-            </el-select>
+            <el-form-item label="居住情况 " prop="houseType">
+                <el-select v-model="formData.houseType" placeholder="请选择居住情况">
+
+                    <el-option label="与父母住" value="Parents" />
+                    <el-option label="政府住房" value="Municipal" />
+                    <el-option label="企业住房" value="Co-op" />
+                    <el-option label="员工宿舍" value="Office" />
+                    <el-option label="租住/合租" value="Rented" />
+                    <el-option label="自住房" value="Owned" />
+                    <el-option label="其他" value="other" />
+                </el-select>
             </el-form-item>
 
-             <el-form-item label="婚姻状态" prop="marriageStatus">
-            <el-select v-model="formData.marriageStatus" placeholder="请选择婚姻状态">
-                <el-option label="已婚" value="Married" />
-                <el-option label="离婚" value="Separated" />
-                <el-option label="单身" value="Single" />
-                <el-option label="丧偶" value="Widow" />
-            </el-select>
+            <el-form-item label="婚姻状态" prop="marriageStatus">
+                <el-select v-model="formData.marriageStatus" placeholder="请选择婚姻状态">
+                    <el-option label="已婚" value="Married" />
+                    <el-option label="离婚" value="Separated" />
+                    <el-option label="单身" value="Single" />
+                    <el-option label="丧偶" value="Widow" />
+                </el-select>
             </el-form-item>
 
-             <el-form-item label="学历情况" prop="educationStatus">
-            <el-select v-model="formData.educationStatus" placeholder="请选择学历情况">
-                <el-option label="中学" value="Secondary School" />
-                <el-option label="大学以及以上" value="University" />
-                <el-option label="大学辍学" value="Incomplete University" />
-                <el-option label="中学以下" value="Lower secondary " />
-            </el-select>
+            <el-form-item label="学历情况" prop="educationStatus">
+                <el-select v-model="formData.educationStatus" placeholder="请选择学历情况">
+                    <el-option label="中学" value="Secondary School" />
+                    <el-option label="大学以及以上" value="University" />
+                    <el-option label="大学辍学" value="Incomplete University" />
+                    <el-option label="中学以下" value="Lower secondary " />
+                </el-select>
             </el-form-item>
 
             <div></div>
@@ -101,6 +102,21 @@
                 <el-button @click="resetForm(ruleFormRef)">重制</el-button>
             </el-form-item>
         </el-form>
+
+        <div class="result">
+            <div>逻辑回归的预测值： {{ result.lrResult }}</div>
+            <el-progress :percentage="result.lrResult" color="#3467eb" />
+            <div>决策树的预测值： {{ result.dtResult }}</div>
+            <el-progress :percentage="result.dtResult" color="#26bd3f" />
+            <div>随机森林的预测值： {{ result.rfResult }}</div>
+            <el-progress :percentage="result.rfResult" color="#7a827c" />
+            <div>神经网络的预测值： {{ result.annResult }}</div>
+            <el-progress :percentage="result.annResult" color="#d99971" />
+            <!-- <el-progress :percentage="100" :format="format" />
+            <el-progress :percentage="100" status="success" />
+            <el-progress :percentage="100" status="warning" />
+            <el-progress :percentage="50" status="exception" /> -->
+        </div>
     </div>
 </template>
 
@@ -108,11 +124,12 @@
 import { defineComponent, reactive, ref } from 'vue'
 import formData from "./formData";
 import { FormInstance, FormRules } from 'element-plus'
+import { lrPredict, dtPredict, rfPredict, annPredict } from './service'
 
 export default defineComponent({
     setup() {
         let formData: formData = reactive({
-            gender: 1,
+            gender: 0,
             ownRealEstate: false,
             ownCar: false,
             ownWorkPhone: false,
@@ -127,6 +144,13 @@ export default defineComponent({
             marriageStatus: "",
         })
 
+        let result = reactive({
+            lrResult: 0,
+            dtResult: 0,
+            rfResult: 0,
+            annResult: 0
+        })
+
         const ruleFormRef = ref<FormInstance>()
 
         const rules = reactive<FormRules>({
@@ -134,20 +158,20 @@ export default defineComponent({
                 { required: true, message: '请选择性别', trigger: 'blur' },
             ],
 
-             ownRealEstate: [
+            ownRealEstate: [
                 { required: true, message: '滑动选择是否有房产', trigger: 'blur' },
             ],
-             ownCar: [
+            ownCar: [
                 { required: true, message: '滑动选择是否有车', trigger: 'blur' },
             ],
-             ownWorkPhone: [
+            ownWorkPhone: [
                 { required: true, message: '滑动选择是有有工作手机', trigger: 'blur' },
             ],
 
             annualIncome: [
                 {
                     required: true,
-                    type: 'number', 
+                    type: 'number',
                     message: '年收入必须为整数数字',
                     trigger: 'change',
                 },
@@ -156,7 +180,7 @@ export default defineComponent({
             childNum: [
                 {
                     required: true,
-                    type: 'number', 
+                    type: 'number',
                     message: '孩子数量必须为整数数字',
                     trigger: 'change',
                 },
@@ -165,7 +189,7 @@ export default defineComponent({
             age: [
                 {
                     required: true,
-                    type: 'number', 
+                    type: 'number',
                     message: '年龄必须为整数数字',
                     trigger: 'change',
                 },
@@ -174,7 +198,7 @@ export default defineComponent({
             worksYears: [
                 {
                     required: true,
-                    type: 'number', 
+                    type: 'number',
                     message: '工作年数必须为整数数字',
                     trigger: 'change',
                 },
@@ -183,7 +207,7 @@ export default defineComponent({
             familySize: [
                 {
                     required: true,
-                    type: 'number', 
+                    type: 'number',
                     message: '家庭成员数量必须为整数数字',
                     trigger: 'change',
                 },
@@ -196,21 +220,21 @@ export default defineComponent({
                     trigger: 'change',
                 },
             ],
-             marriageStatus: [
+            marriageStatus: [
                 {
                     required: true,
                     message: '请选择婚姻状况',
                     trigger: 'change',
                 },
             ],
-             houseType: [
+            houseType: [
                 {
                     required: true,
                     message: '请选择学住房情况',
                     trigger: 'change',
                 },
             ],
-             occupationType: [
+            occupationType: [
                 {
                     required: true,
                     message: '请选择职业',
@@ -225,6 +249,10 @@ export default defineComponent({
                 if (valid) {
                     console.log('submit!')
                     console.log(formData)
+                    lrPredict(formData).then(res => {
+                        result.lrResult = res as any
+                        console.log(res)
+                    })
                 } else {
                     console.log('error submit!', fields)
                 }
@@ -237,6 +265,10 @@ export default defineComponent({
                 if (valid) {
                     console.log('submit!')
                     console.log(formData)
+                    dtPredict(formData).then(res => {
+                        result.dtResult = res as any
+                        console.log(res)
+                    })
                 } else {
                     console.log('error submit!', fields)
                 }
@@ -249,6 +281,10 @@ export default defineComponent({
                 if (valid) {
                     console.log('submit!')
                     console.log(formData)
+                    rfPredict(formData).then(res => {
+                        result.rfResult = res as any
+                        console.log(res)
+                    })
                 } else {
                     console.log('error submit!', fields)
                 }
@@ -261,6 +297,10 @@ export default defineComponent({
                 if (valid) {
                     console.log('submit!')
                     console.log(formData)
+                    annPredict(formData).then(res => {
+                        result.annResult = res as any
+                        console.log(res)
+                    })
                 } else {
                     console.log('error submit!', fields)
                 }
@@ -268,7 +308,12 @@ export default defineComponent({
         }
 
         const resetForm = (formEl: FormInstance | undefined) => {
+            result.annResult = 0
+            result.dtResult = 0
+            result.lrResult = 0
+            result.rfResult = 0
             if (!formEl) return
+
             formEl.resetFields()
         }
 
@@ -276,6 +321,7 @@ export default defineComponent({
             formData,
             ruleFormRef,
             rules,
+            result,
             submitFormLR,
             submitFormDT,
             submitFormRF,
